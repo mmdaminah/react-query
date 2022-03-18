@@ -1,0 +1,10 @@
+.app__wrapper_post {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  border: 1px solid var(--color-black);
+}

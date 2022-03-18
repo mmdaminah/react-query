@@ -1,0 +1,25 @@
+.app__user {
+  background-color: var(--color-white);
+}
+
+.app__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 40vh;
+}
+
+app__wrapper_user {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.section__padding {
+  padding: 4rem 6rem;
+}
