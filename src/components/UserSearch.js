@@ -12,6 +12,7 @@ async function searchUsers(name) {
 export default function UserSearch(user) {
   const [query, setQuery] = useState('');
   const [selectedUser, setSelectedUser] = useState(null);
+  const [userID,setUserID] = useState('none')
 
   const { data, isError, error, isLoading } = useQuery(
     ['name', user.name],
@@ -28,6 +29,8 @@ export default function UserSearch(user) {
 
   return (
     <>
+      <div>Selected user id:{userID}</div>
+    <div style={{display:'flex'}}>
       <div>
         <input
           placeholder='Search user'
@@ -46,7 +49,7 @@ export default function UserSearch(user) {
               <p
                 className='user-name'
                 key={id}
-                onClick={() => setSelectedUser(user)}
+                onClick={() => {setSelectedUser(user);setUserID(user.id)}}
               >
                 {user.name}
               </p>
@@ -56,6 +59,7 @@ export default function UserSearch(user) {
       <div className='app__wrapper_post'>
         {selectedUser && <Posts user={selectedUser} />}
       </div>
+    </div>
     </>
   );
 }
