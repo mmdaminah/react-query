@@ -28,8 +28,9 @@ export default function UserSearch(user) {
     );
 
   return (
-    <>
-      <div>Selected user id:{userID}</div>
+    <div style={{display:'flex'}}>
+      <div>
+    <div>Selected user id:{userID}</div>
     <div style={{display:'flex'}}>
       <div>
         <input
@@ -60,6 +61,10 @@ export default function UserSearch(user) {
         {selectedUser && <Posts user={selectedUser} />}
       </div>
     </div>
-    </>
+    </div>
+    <div>
+      {userID==='none' && <h1>please select a user</h1>}
+    </div>
+    </div>
   );
 }

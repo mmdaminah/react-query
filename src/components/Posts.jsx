@@ -28,11 +28,6 @@ export function Posts({ user }) {
       <div>{console.log(data)}
         <FindPosts data={data} />
       </div>
-      <div>
-        {/* {data.map((post) => (
-          <li key={post.id}>{post.title}</li>
-        ))} */}
-      </div>
     </>
   );
 }
